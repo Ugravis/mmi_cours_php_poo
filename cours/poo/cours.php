@@ -1,1 +1,1 @@
-/Sponsor : exemple de classe. 
+Cours : https://cours.davidannebicque.fr/programmation-orientee-objet-en-php/decouverte/seance-1
