@@ -1,1 +1,1 @@
-Cours : https://cours.davidannebicque.fr/programmation-orientee-objet-en-php/decouverte/seance-1
+Cours et tps : https://cours.davidannebicque.fr/programmation-orientee-objet-en-php/decouverte/seance-1
