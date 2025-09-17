@@ -1,6 +1,7 @@
 <?php
   require 'Vehicule.php';
   require 'Voiture.php';
+  require 'Bus.php';
 
   $vehicule1 = new Vehicule("Renault", 105, 2500);
   echo $vehicule1->lire_caracteristiques();
@@ -15,4 +16,7 @@
   echo $car2->lire_caracteristiques();
   echo "<br>";
   $car2->setType('suv');
-  echo $car2->lire_type();
+
+  echo "<br><br>";
+  $bus1 = new Bus("Man", 360, 17000, 24, 2);
+  echo $bus1->lire_caracteristiques();

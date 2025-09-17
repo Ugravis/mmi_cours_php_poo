@@ -16,7 +16,11 @@
        : $this->type = "INCORRECT";
     }
 
-    public function lire_type(): string {
+    public function lire_caracteristiques(): string {
+      return parent::lire_caracteristiques()."<li>Type : <b>{$this->getType()}</b></li>";
+    }
+
+    public function getType(): string {
       return $this->type;
     }
   }
