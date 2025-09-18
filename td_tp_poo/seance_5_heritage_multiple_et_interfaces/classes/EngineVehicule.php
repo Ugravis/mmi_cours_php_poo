@@ -2,12 +2,12 @@
   abstract class EngineVehicule {
     private string $engineType;
     private int $nbPassagers;
-    static int $nbVehicules;
+    protected static int $nbVehicules = 0;
 
     protected function __construct(string $engineType, int $nbPassagers) {
       $this->setEngineType($engineType);
       $this->setNbPassagers($nbPassagers);
-      $this->nbVehicules += 1;
+      self::$nbVehicules++;
     }
 
     protected function setEngineType(string $engineType): void {
@@ -35,7 +35,7 @@
       return $this->nbPassagers;
     }
 
-    protected function getNbVehicules(): int {
-      return $this->nbVehicules;
+    public static function getNbVehicules(): int {
+      return self::$nbVehicules;
     }
   }

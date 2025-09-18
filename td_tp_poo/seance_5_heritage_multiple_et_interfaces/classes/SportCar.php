@@ -6,6 +6,7 @@
 
     public function __construct(string $engineType, int $nbPassagers, string $brand, int $horseMotor, float $zeroToHundredTime) {
       parent::__construct($engineType, $nbPassagers, $brand, $horseMotor);
+      $this->setZeroToHundredTime($zeroToHundredTime);
     }
 
     private function setZeroToHundredTime(float $zeroToHundredTime): void {
