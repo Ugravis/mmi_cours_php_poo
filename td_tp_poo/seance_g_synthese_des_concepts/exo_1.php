@@ -35,3 +35,10 @@
 	echo Student::getHumanNumber();
 
   echo "<br><h2>Etape 3</h2>";
+
+  $person3 = new Person('Palenor', 'Hubert', 'homme');
+  echo $person3->describe();
+
+  echo "<br><h2>Etape 4</h2>";
+
+  
