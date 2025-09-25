@@ -10,12 +10,18 @@
     protected string $name;
     protected string $sex;
     protected float $money = 0;
-    protected int $offDays;
+    protected int $offDays = 0;
+    protected static int $humanNumber = 0;
 
     public function __construct(string $surname, string $name, string $sex) {
       $this->setSurname($surname);
       $this->setName($name);
       $this->setSex($sex);
+      static::$humanNumber ++;
+    }
+
+    public static function getHumanNumber(): string {
+      return "<p>Nombre de personnes : <b>" . self::$humanNumber . "</b></p>"; 
     }
 
     public function setSurname(string $surname): void {
@@ -60,10 +66,14 @@
     }
 
     public function describe(): string {
-      return "<p>Nom : <b>{$this->name}<br>Prénom : </b>{$this->surname}<b></b><p>";
+      return "
+        Infos :
+        <li>Nom : <b>{$this->name}</b></li>
+        <li>Prénom : <b>{$this->surname}</b></li>
+      ";
     }
 
     public function describe_with_money(): string {
-      return $this->describe()."<br><p>Argent : <b>{$this->money}</b></p>";
+      return $this->describe()."<li>Argent : <b>{$this->money}</b></li>";
     }
   }

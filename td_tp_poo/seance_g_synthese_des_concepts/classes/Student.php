@@ -6,7 +6,7 @@
     protected int $age;
     protected string $formation;
     protected string $result;
-    static int $nbStudents;
+    protected static int $nbStudents = 0;
 
     public function __construct(string $surname, string $name, string $sex, string $studentID, string $formation, int $age) {
       parent::__construct($surname, $name, $sex);
@@ -17,7 +17,7 @@
     }
 
     public function setStudentID(string $studentID): void {
-      if (preg_match("/^$\d{10}[A-Za-z]/", $studentID)) {
+      if (preg_match("/^\d{10}[A-Za-z]$/", $studentID)) {
         $this->studentID = $studentID;
       } else {
         echo "Erreur dans le numéro étudiant. La propriété attend une string de 10 chiffres et une lettre.";
@@ -34,6 +34,10 @@
       } else {
         echo "Erreur dans l'âge. La propriété attend un int positif.";
       }
+    }
+
+    public function getAge(): int {
+      return $this->age;
     }
 
     public function work(float $hours): void {
