@@ -52,7 +52,7 @@
       }
     }
 
-    public function describe_with_result(float $note): string {
+    public function set_result_and_describe(float $note): string {
       $this->result = $note >= 10
         ? "reçu(e)"
         : "ajourné(e)";

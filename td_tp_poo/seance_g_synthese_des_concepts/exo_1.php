@@ -1,11 +1,11 @@
 <?php
   require 'classes/Person.php';
   require 'classes/Student.php';
-  echo "hello";
+  require 'classes/StudentMMI.php';
 
   echo "<h2>Etape 1</h2>";
 
-  echo Student::getHumanNumber();
+  echo Student::getPersonNumber();
 
   $person1 = new Student('Durand', 'Paul', 'homme', '1234567890A', 'GEA', 16);
   echo $person1->describe();
@@ -32,7 +32,7 @@
 	echo $person2->describe().'<br>';
 	$person2->work(20);
 	echo $person2->describe_with_money();
-	echo Student::getHumanNumber();
+	echo Student::getPersonNumber();
 
   echo "<br><h2>Etape 3</h2>";
 
@@ -41,4 +41,20 @@
 
   echo "<br><h2>Etape 4</h2>";
 
-  
+  $person4 = new StudentMMI('Hontoi', 'Franck', 'homme', '6789012345C', 18, 'Web avancé');
+	echo $person4->describe();
+  echo "<br>";
+	$person4->work(35);
+	echo $person4->describe_with_money();
+  echo "<br>";
+	echo $person4->set_result_and_describe(11);
+  echo "<br>";
+	echo $person4->describe_with_option();
+  echo "<br>";
+	$person4->changeOption('Conception graphique');
+	echo $person4->describe_with_option();
+  echo "<br>";
+
+	echo Student::getPersonNumber();
+	unset($person4);
+	echo Student::getPersonNumber();

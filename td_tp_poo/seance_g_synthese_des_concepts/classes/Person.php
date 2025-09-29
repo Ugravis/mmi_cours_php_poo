@@ -20,7 +20,7 @@
       static::$humanNumber ++;
     }
 
-    public static function getHumanNumber(): string {
+    public static function getPersonNumber(): string {
       return "<p>Nombre de personnes : <b>" . self::$humanNumber . "</b></p>"; 
     }
 

@@ -4,8 +4,8 @@
   final class StudentMMI extends Student {
     private string $optionS4;
 
-    public function __construct(string $surname, string $name, string $sex, string $studentID, string $formation, int $age, string $optionS4) {
-      parent::__construct($surname, $name, $sex, $studentID, $formation, $age);
+    public function __construct(string $surname, string $name, string $sex, string $studentID, int $age, string $optionS4) {
+      parent::__construct($surname, $name, $sex, $studentID, "MMI", $age);
       $this->changeOption($optionS4);
     }
 
